@@ -1,0 +1,235 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background-image: url('pexels-ákos-szabó-440731.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    
+
+}
+
+
+.sun {
+
+
+	width: 150px;
+	height: 150px;
+	background-color: #FFDE00;
+
+
+
+	border-radius: 50%;
+	box-shadow:
+		0 0 0 20px #FFDE0080,
+		0 0 0 40px #FFDE0040,
+		0 0 0 60px #FFDE0020,
+		0 0 0 80px #FFDE0010,
+		0 0 0 100px #FFDE0000,
+		0 0 40px 100px #FFDE0010;
+	animation:
+		sunrise 2s infinite linear forwards,
+		rays 2s 2s infinite linear;
+        position: absolute;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+@keyframes sunrise {
+	0% {
+		box-shadow: none;
+	}
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FFDE0080,
+		0 0 0 20px #FFDE0080,
+		0 0 0 40px #FFDE0040,
+		0 0 0 60px #FFDE0020,
+		0 0 0 80px #FFDE0010,
+		0 0 40px 100px #FFDE0010;
+	}
+	100% {
+		box-shadow: 
+		0 0 0 20px #FFDE0080,
+		0 0 0 40px #FFDE0040,
+		0 0 0 60px #FFDE0020,
+		0 0 0 80px #FFDE0010,
+		0 0 0 100px #FFDE0000,
+		0 0 40px 100px #FFDE0010;
+	}
+}
+
+
+p {
+  font-size: 2rem;
+  margin: 75px 75px 75px 75px;
+  text-align: center;
+  line-height: 5rem;
+  color: rgb(255, 255, 255);
+}
+
+/* -------------------------------birds------------------------------- */
+
+
+.bird
+{
+  position: absolute;
+  background-image: url(bird-cells-new.svg);
+  background-attachment: fixed;
+
+
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+              animation-name: fly-cycle;
+              animation-timing-function: steps(10);
+              animation-iteration-count: infinite;
+    position: fixed;
+
+}
+
+.bird--one
+{
+              animation-duration: 1s;
+              animation-delay: -0.5s;
+}
+.bird--two
+{
+              animation-duration: 0.9s;
+              animation-delay: -0.75s;
+}
+.bird--three
+{
+              animation-duration: 1.25s;
+              animation-delay: -0.25s;
+}
+.bird--four
+{
+              animation-duration: 1.1s;
+              animation-delay: -0.5s;
+}
+
+.bird-container
+{
+  position: absolute;
+  top: 10%;
+  left: -10%;
+          transform: scale(0) translateX(-10vw);
+  will-change: transform;
+          animation-name: fly-right-one;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+    position: fixed;
+
+}
+
+.bird-container--one
+{
+          animation-duration: 15s;
+          animation-delay: 0;
+}
+.bird-container--two
+{
+          animation-duration: 16s;
+          animation-delay: 1s;
+}
+.bird-container--three
+{
+          animation-duration: 14.6s;
+          animation-delay: 9.5s;
+}
+.bird-container--four
+{
+          animation-duration: 16s;
+          animation-delay: 10.25s;
+}
+
+@keyframes fly-cycle
+{
+  100%
+  {
+    background-position: -900px 0;
+  }
+}
+
+@keyframes fly-right-one
+{
+  0%
+  {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10%
+  {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  20%
+  {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  30%
+  {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  40%
+  {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  50%
+  {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  60%
+  {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  100%
+  {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+
+@keyframes fly-right-two
+{
+  0%
+  {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  10%
+  {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  20%
+  {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  30%
+  {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  40%
+  {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  50%
+  {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  51%
+  {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  100%
+  {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
